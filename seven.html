@@ -1,0 +1,43 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link class="codestyle" rel="stylesheet" href="https://highlightjs.org/static/demo/styles/dracula.css">
+  </head>
+  <body>
+    <a href="eight.html">
+    <img class="c" src="https://idxbroker.com/images/brands/idx.png" />
+  </a>
+<h1 class="c">IDX API</h1>
+<h2 class="c">We will use PHP in this example.</h2>
+<p class="c">
+  <div style="width:60%; padding-left:20%;">
+  <pre>
+    <code class="php">
+// access URL and request method<br />
+$url = 'https://api.idxbroker.com/clients/featured';<br />
+$method = 'GET';<br />
+
+// headers (required and optional)<br />
+$headers = array(<br />
+	'Content-Type: application/x-www-form-urlencoded', // required<br />
+	'accesskey: apiSampleKey', // required - replace with your own<br />
+	'outputtype: json' // optional - overrides the preferences in our API control page<br />
+);<br />
+// set up cURL<br />
+$handle = curl_init();<br />
+curl_setopt($handle, CURLOPT_URL, $url);<br />
+curl_setopt($handle, CURLOPT_HTTPHEADER, $headers);<br />
+curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);<br />
+curl_setopt($handle, CURLOPT_SSL_VERIFYHOST, false);<br />
+curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false);<br />
+
+// exec the cURL request and returned information. Store the returned HTTP code in $code for later reference<br />
+$response = curl_exec($handle);<br />
+$code = curl_getinfo($handle, CURLINFO_HTTP_CODE);<br />
+</code>
+</pre>
+  </div>
+</p>

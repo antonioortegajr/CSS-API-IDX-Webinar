@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link class="codestyle" rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atom-one-dark.css">
+  </head>
+  <body>
+    <a href="five.html">
+    <img class="c" src="https://idxbroker.com/images/brands/idx.png" />
+  </a>
+<h1 class="c">IDX Customization</h1>
+<h2 class="c">Use ?nocss at the end of a details URL</h2>
+<p class="c">
+  Example: <a href="https://eugenewebdevs.idxbroker.com/idx/details/listing/a000/D1382663/3701-NE-201-ST-Aventura-FL-33180?nocss">https://eugenewebdevs.idxbroker.com/idx/details/listing/a000/D1382663/3701-NE-201-ST-Aventura-FL-33180?nocss</a>
+</p>
+<h2 class="c">What can I not do with custom CSS?</h2>
+<p class="c">Anything requiring logic or ajax</p>
+<div style="width:60%; padding-left:20%;">
+<pre>
+  <code>
+    //Example of JavaScript logic:
+    var lead = 'loggedIn';
+    if(lead != 'loggedIn'){
+    alert('Please log in');
+  }
+
+  // Example of Ajax:  $("button").click(function(){
+    $.ajax({url: "https://mysite.com/ajaxFolder/agentName.json", success: function(result){
+        $("#agentNameDiv").html(result);
+    }});
+})
+  </code>
+</pre>
+</div>
+</p>
+  </body>
+</html>
